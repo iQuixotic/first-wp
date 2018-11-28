@@ -50,7 +50,7 @@
                             <?php 
                             
                             $featured = new WP_Query('post_type=post&posts_per_page=1&cat=5');
-                            if($featured->have_posts());
+                            if($featured->have_posts()) {
                                 while($featured->have_posts()): $featured->the_post();
 
                             ?>
@@ -61,9 +61,33 @@
                             <?php
                                 endwhile;
                                 wp_reset_postdata();
-                            // endif;
+                            }
+
+                            // second loop
+                            $args = array(
+                                'post_type' => 'post',
+                                'posts_per_page' => 2,
+                                'category__not_in' => array(8),
+                                'category__in' => array(9, 10),
+                                'offset' => 1
+                            );
+                            
+                            $secondary = new WP_Query($args);
+                            if($secondary->have_posts()) {
+                                while($secondary->have_posts()): $secondary->the_post();
 
                             ?>
+                                <!-- here goes content -->
+                                <div class="col-6">
+                                <?php get_template_part('template-parts/content', 'secondary'); ?>
+                                </div>
+                            <?php
+                                endwhile;
+                                wp_reset_postdata();
+                            }
+
+                            ?>
+                            
                         </div>
                     </div>
                     </div>

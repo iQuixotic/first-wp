@@ -48,7 +48,6 @@ nav {
 }
 
 .search {
-    background: yellow;
     height: 30px;
 }
 
@@ -92,7 +91,7 @@ footer {
 }
 
 .services, 
-.search, footer a {
+footer a {
     color: white;
 }
 

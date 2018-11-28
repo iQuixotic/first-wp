@@ -5,10 +5,11 @@
 <div class="content-area">
     <main>
         <section class='middle-area'>
+        <div class="news col-md-9">
             <div class="container">
                 <div class="row">
                    
-                    <div class="news col-md-9">
+                   
                         <?php
                         if(have_posts()):
                             while(have_posts()): the_post();
