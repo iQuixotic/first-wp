@@ -75,7 +75,6 @@ nav {
     background-color: blueviolet;
 }
 
-
 .menu-area {
     background-color: rgb(209, 209, 209);
     text-transform: uppercase;
@@ -84,6 +83,10 @@ nav {
 .menu-area a {
     color: rgb(114, 5, 5);
     font-weight: bold;
+}
+
+.length-of-container {
+    width: 100%;
 }
 
 footer {

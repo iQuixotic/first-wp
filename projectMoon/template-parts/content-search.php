@@ -4,7 +4,9 @@
     </a>
 
     <p>by <?php the_author_posts_link(); ?></p>
-    <p>Categories: <?php the_category(' '); ?></p>
+    <?php if(has_category()) :?>
+        <p>Categories: <?php the_category(' '); ?></p>
+    <?php endif; ?>
     <p><?php the_tags('Tags: ', ', '); ?></p>
     <p><?php the_excerpt(); ?></p>
 </article>

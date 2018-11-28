@@ -16,6 +16,16 @@
                             
                             get_template_part('template-parts/content', get_post_format() );
                         endwhile;
+                        ?>
+                            <div class="row length-of-container">
+                                <div class="pages col-md-6 text-left">
+                                    <?php previous_posts_link("< Newer posts"); ?>
+                                </div>
+                                <div class="pages col-md-6 text-right">
+                                    <?php next_posts_link("Older posts >"); ?>
+                                </div>
+                            </div>
+                        <?php
                         else:
                             ?>
                         <p>There is nothing to be displayed!</p> 
