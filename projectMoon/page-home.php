@@ -45,7 +45,27 @@
                 <div class="row">
                     <aside class="sidebar col-md-3 h-100"><?php get_sidebar( 'home' ); ?></aside>
                     <div class="news col-md-9">
-                      <p>hey bitchs</p>
+                    <div class="container">
+                        <div class="row">
+                            <?php 
+                            
+                            $featured = new WP_Query('post_type=post&posts_per_page=1&cat=5');
+                            if($featured->have_posts());
+                                while($featured->have_posts()): $featured->the_post();
+
+                            ?>
+                                <!-- here goes content -->
+                                <div class="col-12">
+                                <?php get_template_part('template-parts/content', 'featured'); ?>
+                                </div>
+                            <?php
+                                endwhile;
+                                wp_reset_postdata();
+                            // endif;
+
+                            ?>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
