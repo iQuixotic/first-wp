@@ -4,7 +4,7 @@
         <section class='slide'>
             <div class="container">
                 <div class="row">
-                    Slide
+                    <?php motoPressSlider( "home-slider" ) ?>
                 </div>
             </div>
         </section>

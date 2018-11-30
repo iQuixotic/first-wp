@@ -16,7 +16,6 @@ article h2 {
 .head-image {
     width: 200px;
     height: 200px;
-    
 }
 
 p a {
@@ -28,13 +27,14 @@ p a:hover {
     text-decoration: none;
     color: green;
 }
+
 .top-bar {
     background: purple;
     height: 50px;
     /* width: 100%; */
 }
 
-section {
+.middle-area {
     padding: 15px;
 }
 
@@ -107,6 +107,13 @@ footer a:hover {
     color: rgb(240, 59, 89);
     text-decoration: none;
 } 
+
+/* Sidebar */
+.wpcf7 input[type='text'],
+.wpcf7 input[type='email'],
+.wpcf7 textarea {
+    width: 100%;
+}
 
 
 /* Thumbnails */
