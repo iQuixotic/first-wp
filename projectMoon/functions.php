@@ -19,6 +19,8 @@ function projectMoon_config() {
         )
     );
 
+require get_template_directory() . '/inc/customizer.php';
+
     $args = array(
         'height' => 225,
         'width' => 1920
