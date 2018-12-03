@@ -29,6 +29,10 @@ require get_template_directory() . '/inc/customizer.php';
     add_theme_support('post-thumbnails');
     add_theme_support('post-formats', array('video', 'image'));
     add_theme_support('title-tag');
+    add_theme_support('custom-logo', array(
+        'height' => 110,
+        'width' => 200
+    ));
 }
 
 add_action('after_setup_theme', 'projectMoon_config', 0);

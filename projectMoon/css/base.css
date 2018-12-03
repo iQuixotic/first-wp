@@ -131,3 +131,11 @@ footer a:hover {
     display: inline-block;
     width: 100%;
 }
+
+/* Header-Logo */
+
+.align {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
